@@ -7,7 +7,7 @@ html{
 }
 .loading-wrap p{
 	margin-top: 20px;
-	font-size:50px;
+	font:bold 40px 幼圆,微软雅黑,arial,sans-serif;
 	color:#6bf;
 }
 .section{
@@ -32,5 +32,5 @@ html{
 	width:100%;
 	text-align: center;
 	color: #000;
-	font-size: 100px;
+	font: bold 100px STCaiyun,幼圆,微软雅黑,arial,sans-serif;;
 }
