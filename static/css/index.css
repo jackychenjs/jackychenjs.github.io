@@ -1,12 +1,14 @@
 html{
-	font-family: consolas,微软雅黑;
+	font-family: STCaiyun,YouYuan,微软雅黑,consolas,arial,sans-serif;
+	font-weight: bold;
 }
 .loading-wrap{
 	text-align: center;
 }
 .loading-wrap p{
-	font-size:30px;
-	color:#1ce;
+	margin-top: 20px;
+	font-size:50px;
+	color:#6bf;
 }
 .section{
 	background-size:cover;
