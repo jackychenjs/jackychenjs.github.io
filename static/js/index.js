@@ -13,6 +13,7 @@ $(function(){
 		    	'verticalCentered': false,
 		    	'anchors': ['page1', 'page2', 'page3', 'page4'],
 		    	'css3': false,
+		    	'navigation': true,
 		    	'afterRender': function(){
 		    		that.initMask();
 		    	}

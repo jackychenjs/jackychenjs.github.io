@@ -111,8 +111,8 @@ html, body {
 #fullPage-nav li,
 .fullPage-slidesNav li {
     display: block;
-    width: 14px;
-    height: 13px;
+    width: 16px;
+    height: 15px;
     margin: 7px;
     position:relative;
 }
@@ -137,8 +137,8 @@ html, body {
 .fullPage-slidesNav span {
     top: 2px;
     left: 2px;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border: 1px solid #000;
     background: rgba(0, 0, 0, 0);
     -webkit-border-radius: 50%;
