@@ -25,19 +25,17 @@ $(function(){
 		    $('#fullpage').fullpage(para);
 		},
 		initEvent: function(){
-			/*document.onreadystatechange = function () {   
-	            if(document.readyState=="complete") {
-	            	$("#hint").fadeIn();
-	            	setTimeout(function(){
-	            		document.getElementById('divprogressbar').style.display='none';
-	            	},5000)
-	            } 
-	        };*/
+	        $.fn.fullpage.setAutoScrolling(false);
+	        $('html, body').css({
+				'overflow' : 'hidden',
+				'height' : '100%'
+			});
 	        window.onload = function(){
             	$("#hint").fadeIn();
             	setTimeout(function(){
+            		$.fn.fullpage.setAutoScrolling(true);
             		document.getElementById('divprogressbar').style.display='none';
-            	},3000)
+            	},3000);
 	        };
 		}
 	};
