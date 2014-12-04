@@ -5,7 +5,7 @@ $(function(){
 			this.initEvent();
 		},
 		initMask : function(){
-			$('<div id="divprogressbar" style="position: fixed; width: 100%; height: 100%; left: 0px; top: 0px; background-color: #fff; opacity:1.0; filter: alpha (opacity = 100); z-index: 9999"><div class="loading-wrap"><img src="static/images/loading.gif"></img><p class="css677e3e9e4bdae38e0b9e1aa6b6fa8f73">玩命加载中……</p><p id="hint" class="css677e3e9e4bdae38e0b9e1aa6b6fa8f73" style="display:none;">载入成功……</p></div></div>').appendTo($('body'));
+			$('<div id="divprogressbar" style="position: fixed; width: 100%; height: 100%; left: 0; top: 0; background-color: #fff; opacity:1.0; filter: alpha (opacity = 100); z-index: 9999"><div class="loading-wrap"><img src="static/images/loading.gif"></img><p class="css677e3e9e4bdae38e0b9e1aa6b6fa8f73">玩命加载中……</p><p id="hint" class="css677e3e9e4bdae38e0b9e1aa6b6fa8f73" style="display:none;">载入成功……</p></div></div>').appendTo($('body'));
 		},
 		initFullpage: function(){
 			var that = this;
