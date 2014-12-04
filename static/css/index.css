@@ -7,9 +7,7 @@ html{
 }
 .loading-wrap p{
 	margin-top: 20px;
-	/*font:34px 华文琥珀,幼圆,微软雅黑,arial,sans-serif;*/
 	font-size: 34px;
-	border:1px #6ef;
 	color:#6bf;
 }
 .section{
