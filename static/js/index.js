@@ -5,7 +5,7 @@ $(function(){
 			this.initEvent();
 		},
 		initMask : function(){
-			$('<div id="divprogressbar" style="position: fixed; width: 100%; height: 100%; left: 0px; top: 0px; background-color: #fff; opacity:1.0; filter: alpha (opacity = 100); z-index: 9999"><div class="loading-wrap"><img src="static/images/loading.gif"></img><p class="css0fba4a22b5f662176bba6345ce42eb2b">玩命加载中……</p><p id="hint" class="css0fba4a22b5f662176bba6345ce42eb2b" style="display:none;">载入成功……</p></div></div>').appendTo($('body'));
+			$('<div id="divprogressbar" style="position: fixed; width: 100%; height: 100%; left: 0px; top: 0px; background-color: #fff; opacity:1.0; filter: alpha (opacity = 100); z-index: 9999"><div class="loading-wrap"><img src="static/images/loading.gif"></img><p class="css0a5f14c82f7d1edcdd817f87782c30b6">玩命加载中……</p><p id="hint" class="css0a5f14c82f7d1edcdd817f87782c30b6" style="display:none;">载入成功……</p></div></div>').appendTo($('body'));
 		},
 		initFullpage: function(){
 			var that = this;
@@ -36,7 +36,7 @@ $(function(){
 	        window.onload = function(){
             	$("#hint").fadeIn();
             	setTimeout(function(){
-            		//document.getElementById('divprogressbar').style.display='none';
+            		document.getElementById('divprogressbar').style.display='none';
             	},3000)
 	        };
 		}
