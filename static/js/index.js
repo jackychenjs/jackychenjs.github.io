@@ -1,7 +1,7 @@
 $(function(){
 	var fuc = {
 		init: function(){
-			this.initFullpage();
+			//this.initFullpage();
 			this.bindEvent();
 		},
 		initMask : function(){
@@ -29,15 +29,15 @@ $(function(){
 
 		},
 		loadingMask: function(){
-			$.fn.fullpage.setAutoScrolling(false);
-	        $('html, body').css({
+			//$.fn.fullpage.setAutoScrolling(false);
+	        /*$('html, body').css({
 				'overflow' : 'hidden',
 				'height' : '100%'
-			});
+			});*/
 	        window.onload = function(){
 	        	$("#hint").fadeIn();
 	        	setTimeout(function(){
-	        		$.fn.fullpage.setAutoScrolling(true);
+	        		//$.fn.fullpage.setAutoScrolling(true);
 	        		document.getElementById('divprogressbar').style.display='none';
 	        	},3000);
 	        };
