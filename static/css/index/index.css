@@ -18,33 +18,12 @@ html{
 	color:#6bf;
 }
 .section{
-	height: 1080px;
-	background-size:cover;
-	background-position: 50%;
-}
-.section1{
-	background-color: #000;
-}
-.section2{
-	background-color: #00f;
-}
-.section3{
-	background-color: #0ff;
-}
-.section4{
-	background-color: #0f0;
-}
-.section5{
-	background-color: #ff0;
-}
-.section6{
-	background-color: #f60;
-}
-.section7{
-	background-color: #f00;
-}
-.section8{
-	background-color: #fff;
+	/* transform: scale(1.02,1.02);
+	-ms-transform: scale(1.02,1.02);
+	-webkit-transform: scale(1.02,1.02); */
+	background-size: cover;
+	background-position: 50% 50%;
+	background-image: url('../images/ROAME_243816_7CC7F367.jpg');
 }
 .title{
 	position:absolute;
