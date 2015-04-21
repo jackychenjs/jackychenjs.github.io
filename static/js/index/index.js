@@ -2,7 +2,7 @@ $(function(){
 	var fuc = {
 		init: function(){
 			//this.initFullpage();
-			//this.initMask();
+			this.initMask();
 			this.bindEvent();
 			this.doParallax();
 		},
