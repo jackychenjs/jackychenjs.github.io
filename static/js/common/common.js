@@ -7,7 +7,7 @@
 
 	/*判断是否手机浏览*/
 	function checkMobile(support, url){
-		url = url || 'page/error/helloworld.html';
+		url = url || 'helloworld.html';
 		if(navigator.platform.indexOf('Win32') == -1){ 
 			if(!support){
 				location.href = url;
