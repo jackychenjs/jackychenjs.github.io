@@ -32,8 +32,8 @@
 	height: 1080px;
 	margin: 0 auto;
 	padding: 0;
-	background-size: cover;
-	background-position: 50% 0;
+	/* background-size: cover; */
+	background-position: center 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }

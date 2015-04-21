@@ -18,7 +18,7 @@
 	/*视差滚动*/
 	$.fn.JCparallax = function(opt){
 		var option = $.extend({
-			xpos : '50%',
+			xpos : 'center',
 			speedf : 0.1
 		}, opt || {});
 

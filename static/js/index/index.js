@@ -15,15 +15,17 @@ $(function(){
 		},
 		loadingMask: function(){
 			//$.fn.fullpage.setAutoScrolling(false);
-	        /*$('html, body').css({
-				'overflow' : 'hidden',
-				'height' : '100%'
-			});*/
+	        $('body').css({
+				'overflow' : 'hidden'
+			});
 	        window.onload = function(){
 	        	$("#hint").fadeIn();
 	        	setTimeout(function(){
 	        		//$.fn.fullpage.setAutoScrolling(true);
 	        		document.getElementById('divprogressbar').style.display='none';
+	        		$('body').css({
+						'overflow' : 'auto'
+					});
 	        	},3000);
 	        };
 		},
@@ -33,7 +35,6 @@ $(function(){
 			$('#p3').JCparallax({speedf: 0.1});
 			$('#p4').JCparallax({speedf: 0.1});*/
 			$('.fp').JCparallax({speedf: 0.1});
-
 		}
 
 
