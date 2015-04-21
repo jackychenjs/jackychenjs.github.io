@@ -1,8 +1,5 @@
-html{
-	font-family: STCaiyun,YouYuan,微软雅黑,consolas,arial,sans-serif;
-	font-weight: bold;
-}
-.loading-wrap{
+/***** loading *****/
+.loading_wrap{
 	position: absolute;
 	top:50%;
 	left:50%;
@@ -12,24 +9,32 @@ html{
 	width:260px;
 	text-align: center;
 }
-.loading-wrap p{
+.loading_wrap p{
 	margin-top: 20px;
 	font-size: 34px;
 	color:#6bf;
 }
-.section{
-	/* transform: scale(1.02,1.02);
-	-ms-transform: scale(1.02,1.02);
-	-webkit-transform: scale(1.02,1.02); */
-	background-size: cover;
-	background-position: 50% 50%;
-	background-image: url('../images/ROAME_243816_7CC7F367.jpg');
+
+
+#p1{
+	background-image: url('../../images/index/bg1.jpg');
 }
-.title{
-	position:absolute;
-	bottom:100px;
-	width:100%;
-	text-align: center;
-	color: #000;
-	font: bold 100px STCaiyun,幼圆,微软雅黑,arial,sans-serif;;
+#p2{
+	background-image: url('../../images/index/bg2.jpg');
+}
+#p3{
+	background-image: url('../../images/index/bg3.jpg');
+}
+#p4{
+	background-image: url('../../images/index/bg4.jpg');
+}
+.fp{
+	height: 1080px;
+	margin: 0 auto;
+	padding: 0;
+	/* background-size: cover; */
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: white;
 }

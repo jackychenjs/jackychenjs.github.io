@@ -1,57 +1,48 @@
 /*
- * Editor   jacky_cjs
- * Date     2015.04.21
- * Version  0.1
+ *  Editor        jacky_cjs
+ *  Created       2015.04.21
+ *  Version       0.1
+ *  LastModified  2015.04.21
+ *  ModifiedTips
+
  */
 
-
 (function($){
+	var $window = $(window);
+	var windowHeight = $window.height();
+
+	$window.resize(function () {
+		windowHeight = $window.height();
+	});
+
 	/*视差滚动*/
-	$.fn.Jparallax = function(opt){
+	$.fn.JCparallax = function(opt){
 		var option = $.extend({
-			xpos : 50%,
-			speedf : 0.1,
-			oheight : true
+			xpos : '50%',
+			speedf : 0.1
 		}, opt || {});
 
-		var $this = $(this);
-		var getHeight;
-		var firstTop;
-		var paddingTop = 0;
-			
-		$this.each(function(){
-		    firstTop = $this.offset().top;
-		});
-
-		if (opt.oheight) {
-			getHeight = function(jqo) {
-				return jqo.oheight(true);
-			};
-		} else {
-			getHeight = function(jqo) {
-				return jqo.height();
-			}; 
-		}
+		var $this = $(this),
+			firstTop = $this.offset().top;
 		
-		function update(){
+		function updatePos(){
 			var pos = $window.scrollTop();				
 
 			$this.each(function(){
-				var $element = $(this);
-				var top = $element.offset().top;
-				var height = getHeight($element);
+				var $element = $(this),
+					top = $element.offset().top,
+					height = $element.height();
 
 				if (top + height < pos || top > pos + windowHeight) {
 					return;
 				}
 
-				$this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedf) + "px");
+				$element.css('backgroundPosition', option.xpos + " " + Math.round((firstTop - pos) * option.speedf) + "px");
 			});
 		}		
 
-		$window.bind('scroll', update).resize(update);
-		update();
+		$window.on('scroll', updatePos).resize(updatePos);
+		updatePos();
 	}
-
 
 })(jQuery);
