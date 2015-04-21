@@ -22,22 +22,21 @@
 			speedf : 0.1
 		}, opt || {});
 
-		var $this = $(this),
-			firstTop = $this.offset().top;
+		var $this = $(this);
 		
 		function updatePos(){
 			var pos = $window.scrollTop();				
 
 			$this.each(function(){
-				var $element = $(this),
-					top = $element.offset().top,
-					height = $element.height();
+				var $ele = $(this),
+					top = $ele.offset().top,
+					height = $ele.height();
 
 				if (top + height < pos || top > pos + windowHeight) {
 					return;
 				}
 
-				$element.css('backgroundPosition', option.xpos + " " + Math.round((firstTop - pos) * option.speedf) + "px");
+				$ele.css('backgroundPosition', option.xpos + " " + (top - pos) * option.speedf + "px");
 			});
 		}		
 
