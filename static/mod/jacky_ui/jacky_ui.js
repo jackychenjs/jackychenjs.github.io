@@ -36,7 +36,7 @@
 					return;
 				}
 
-				$ele.css('backgroundPosition', option.xpos + " " + (top - pos) * option.speedf + "px");
+				$ele.css('backgroundPosition', option.xpos + " " + Math.ceil((top - pos) * option.speedf) + "px");
 			});
 		}		
 

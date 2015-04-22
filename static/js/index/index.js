@@ -1,7 +1,7 @@
 $(function(){
 	var fuc = {
 		init: function(){
-			JCCommon.checkMobile(false);
+			JCCommon.checkPlatform();
 			//this.initFullpage();
 			this.initMask();
 			this.bindEvent();
@@ -35,7 +35,7 @@ $(function(){
 			$('#p2').JCparallax({speedf: 0.1});
 			$('#p3').JCparallax({speedf: 0.1});
 			$('#p4').JCparallax({speedf: 0.1});*/
-			$('.fp').JCparallax({speedf: 0.1});
+			$('.fp').JCparallax({speedf: 0.05});
 		}
 
 
