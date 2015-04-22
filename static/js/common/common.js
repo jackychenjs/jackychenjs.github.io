@@ -1,6 +1,7 @@
 (function($){
 	var fuc = {
-		checkPlatform : checkPlatform
+		checkPlatform: checkPlatform,
+		checkMobile: checkMobile
 	}
 
 	/*检测客户端类型是否台式机*/
