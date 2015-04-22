@@ -32,6 +32,8 @@
 	}
 
 	function checkMobile(doRedirect, redirectUrl){
+		var u = navigator.userAgent,
+			app = navigator.appVersion; 
 		if(!!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/)){
 			if(doRedirect){
 				redirectUrl = redirectUrl || "/page/error/nomobile.html";
