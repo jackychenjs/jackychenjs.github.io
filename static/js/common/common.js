@@ -1,7 +1,6 @@
 (function($){
 	var fuc = {
-		checkPlatform : checkPlatform,
-		isPC : checkPlatform(false)
+		checkPlatform : checkPlatform
 	}
 
 	/*检测客户端类型是否台式机*/
@@ -18,10 +17,9 @@
 		system.linux = (p=="X11") || (p.indexOf("Linux") == 0);
 		/*system.ipad = (navigator.userAgent.match(/iPad/i) != null) ? true : false;*/
 		if(system.win || system.mac || system.linux/* || system.ipad*/){
-			alert("win:"+system.win);
-			alert("mac:"+system.mac);
-			alert("linux:"+system.linux);
 			alert(navigator.platform);
+			alert(navigator.userAgent);
+			alert(navigator.appVersion);
 			return true;
 		}else{
 			if(doRedirect){
