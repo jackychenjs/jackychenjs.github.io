@@ -543,7 +543,7 @@ function switchBlackWhite(_black)
 
 function onEnterFrame()
 {
-	if(isMobile)
+	if(isMbile)
 		setContainerHeight();
 	
 	realWindowTop = (isMobile) ? Math.abs( $('#scroller').position().top ) : global.window.scrollTop();

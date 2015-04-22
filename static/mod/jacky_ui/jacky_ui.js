@@ -40,7 +40,7 @@
 			});
 		}		
 
-		$window.on('scroll', updatePos).resize(updatePos);
+		$window.on({'scroll': updatePos,'resize': updatePos});
 		updatePos();
 	}
 

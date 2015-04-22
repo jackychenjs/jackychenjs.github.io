@@ -28,6 +28,19 @@
 #p4{
 	background-image: url('../../images/index/bg4.jpg');
 }
+
+#p1-intro{
+	background-color: #88d7f4;
+}
+#p2-intro{
+	background-color: #db7ff5;
+}
+#p3-intro{
+	background-color: #b1f7bb;
+}
+#p4-intro{
+	background-color: #f8cc7f;
+}
 .fp{
 	height: 1080px;
 	margin: 0 auto;
