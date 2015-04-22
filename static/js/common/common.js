@@ -30,5 +30,16 @@
 		}
 	}
 
+	function checkMobile(doRedirect, redirectUrl){
+		if(!!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/)){
+			if(doRedirect){
+				redirectUrl = redirectUrl || "/page/error/nomobile.html";
+				window.location.href = redirectUrl;
+			}
+			return true;
+		}
+		return false
+	}
+
 	window.JCCommon = fuc;
 })(jQuery);

@@ -1,7 +1,8 @@
 $(function(){
 	var fuc = {
 		init: function(){
-			JCCommon.checkPlatform(true);
+			//JCCommon.checkPlatform(true);
+			JCCommon.checkMobile(true);
 			//this.initFullpage();
 			this.initMask();
 			this.bindEvent();
