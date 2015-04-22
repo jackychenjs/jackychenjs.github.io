@@ -3,7 +3,7 @@ $(function(){
 		init: function(){
 			JCCommon.checkPlatform(true);
 			//this.initFullpage();
-			//this.initMask();
+			this.initMask();
 			this.bindEvent();
 			this.doParallax();
 		},
