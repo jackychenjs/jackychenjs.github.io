@@ -16,7 +16,7 @@
 	});
 
 	/*视差滚动*/
-	$.fn.JCparallax = function(opt){
+	$.fn.jcParallax = function(opt){
 		var option = $.extend({
 			xpos : 'center',
 			speedf : 0.1

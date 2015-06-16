@@ -32,11 +32,7 @@ $(function(){
 	        };
 		},
 		doParallax: function(){
-			/*$('#p1').JCparallax({speedf: 0.1});
-			$('#p2').JCparallax({speedf: 0.1});
-			$('#p3').JCparallax({speedf: 0.1});
-			$('#p4').JCparallax({speedf: 0.1});*/
-			$('.fp').JCparallax({speedf: 0.05});
+			$('.fp').jcParallax({speedf: 0.05});
 		}
 
 
