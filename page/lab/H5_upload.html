@@ -7,9 +7,18 @@
 
 	<link rel="stylesheet" href="../../static/css/common/reset.css">
 	<link rel="stylesheet" href="../../static/css/common/common.css">
-	<link rel="stylesheet" href="../../static/css/lab/H5_input.css">
 </head>
 <body>
-	<input type="file" multiple="multiple"/>
+	<input id="upload" type="file" multiple="multiple"/>
+	<div id="doupload" style="position:absolute;top:50%;left:50%;margin-left:-100px;margin-top:-60px;width:200px;height:120px;background-color:#0092de;color:#fff;">上传文件</div>
+
+
+	<script type="text/javascript">
+		var upload = document.getElementById('upload'),
+			doupload = document.getElementById('doupload');
+		doupload.addEventListener('click', function(){
+			upload.click();
+		}, false);
+	</script>
 </body>
 </html>
