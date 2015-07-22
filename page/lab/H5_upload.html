@@ -3,6 +3,7 @@
 <head>
 	<title>爱生活大法好!</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" id="viewport" name="viewport">
 	<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
 
 	<link rel="stylesheet" href="../../static/css/common/reset.css">
@@ -10,14 +11,39 @@
 </head>
 <body>
 	<input id="upload" type="file" multiple="multiple"/>
-	<div id="doupload" style="position:absolute;top:50%;left:50%;margin-left:-100px;margin-top:-60px;width:200px;height:120px;background-color:#0092de;color:#fff;text-align: center;line-height: 120px;font-size: 30px;border-radius: 20px;">上传文件</div>
+	<div class="mid_wrap">
+		<div id="doupload" class="upload_btn"></div>
+		<div id="filelist" class="upload_list"></div>
+	</div>
 
 
 	<script type="text/javascript">
 		var upload = document.getElementById('upload'),
-			doupload = document.getElementById('doupload');
+			doupload = document.getElementById('doupload'),
+			filelist = document.getElementById('filelist');
+
 		doupload.addEventListener('click', function(){
 			upload.click();
+		}, false);
+
+		upload.addEventListener('change', function(){
+			filelist.innerHTML = '';
+
+			var upFiles = this.files,
+				len = upFiles.length;
+			var pp = document.createElement('p');
+			var tt = document.createTextNode('一共选择了'+len+'个文件');
+				pp.appendChild(tt);
+			filelist.appendChild(pp);
+			if(len > 0){
+				for(var i = 0; i < len; i++){
+					var th = upFiles[i];
+					var p = document.createElement('p');
+					var t = document.createTextNode(upFiles[i].name);
+					p.appendChild(t);
+					filelist.appendChild(p);
+				}
+			}
 		}, false);
 	</script>
 </body>
