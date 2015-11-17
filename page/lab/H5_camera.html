@@ -11,6 +11,7 @@
 
 	<style>
 		.btn {
+			position: relative;
 			display: block;
 			margin: 0 auto;
 			width: 200px;
@@ -27,19 +28,30 @@
 		.btn.ora {
 			background-color:#f90;
 		}
+		.upload-btn {
+		    position: absolute;
+			top: 0;
+		    left: 0;
+		    display: inline-block;
+		    height: 100px;
+		    width: 200px;
+		    opacity: 0.01;
+		}
 		#webcam {
 			border: 2px #ccc solid;
-			border-radius: 5px;
 		}
 	</style>
 </head>
 <body>
-<div>Camera Test</div>
+	<div style="text-align:center;margin-bottom:20px;">Camera Test</div>
+	<div class="btn">拍照
+		<input type="file" accept="image/*" capture="camera" value="拍照" class="upload-btn">
+	</div>
 	<a href="javascript:void(0);" id="run" class="btn ora">开启网络摄像头</a>
 	<video id="webcam" style="width:320px;height:240px;"></video>
 
-	<input type="file" accept="image/*" capture="camera" value="拍照" class="btn">
 
+	<script src="/static/mod/zepto/zepto.min.js"></script>
 	<script type="text/javascript">
 		/*alert('getUserMedia: '+navigator.getUserMedia);
 		alert('mozGetUserMedia: '+navigator.mozGetUserMedia);
