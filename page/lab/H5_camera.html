@@ -37,7 +37,7 @@
 			    }, onSuccess, onError);
 
 			    function onSuccess(stream) {
-
+			    	alert('inSuccess');
 			        var video = document.getElementById('webcam');
 
 			        if (window.URL) {
@@ -50,7 +50,9 @@
 			        //or video.play();
 			    }
 
-			    function onError() {}
+			    function onError() {
+			    	alert('inError');
+			    }
 			}
 		}
 
