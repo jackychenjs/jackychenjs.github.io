@@ -15,32 +15,42 @@
 </head>
 <body>
 <div>Camera Test</div>
-	<video id="video" autoplay=""style='width:320px;height:240px'></video>
-	<button id='picture'>Test Btn</button> 
-	<canvas id="canvas" width="320" height="240"></canvas>
+	<button id="run">开启网络摄像头</button><Br/>
+	<video id="webcam" style="width:320px;height:240px;"></video>
 
 	<script type="text/javascript">
 		var video = document.getElementById("video"),
-	 		context = canvas.getContext('2d');
-	 	var errocb = function () {
-	          alert('sth wrong!');
-	     }
+	 	navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia);
 
-	 	if (navigator.getUserMedia) { // 标准的API
-	        navigator.getUserMedia({ "video": true }, function (stream) {
-	            video.src = stream;
-	            video.play();
-	        }, errocb);
-		} else if (navigator.webkitGetUserMedia) { // WebKit 核心的API
-	        navigator.webkitGetUserMedia({ "video": true }, function (stream) {
-	            video.src = window.webkitURL.createObjectURL(stream);
-	            video.play();
-	        }, errocb);
+		if (!navigator.getUserMedia) {
+		    return;
 		}
 
-		 document.getElementById("picture").addEventListener("click", function () {
-	        context.drawImage(video, 0, 0, 640, 480);
-	 	});
+		var btn = document.getElementById('run');
+		btn.onclick = startWebcam;
+
+		function startWebcam(e) {
+		    navigator.getUserMedia({
+		        video: true,
+		        audio: true
+		    }, onSuccess, onError);
+
+		    function onSuccess(stream) {
+
+		        var video = document.getElementById('webcam');
+
+		        if (window.URL) {
+		            video.src = window.URL.createObjectURL(stream);
+		        } else {
+		            video.src = stream;
+		        }
+
+		        video.autoplay = true;
+		        //or video.play();
+		    }
+
+		    function onError() {}
+		}
 	</script>
 </body>
 </html>
