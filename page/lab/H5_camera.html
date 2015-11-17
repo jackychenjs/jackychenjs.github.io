@@ -28,7 +28,7 @@
 			function startWebcam(e) {
 			    navigator.getUserMedia({
 			        video: true,
-			        audio: true
+			        audio: false
 			    }, onSuccess, onError);
 
 			    function onSuccess(stream) {
