@@ -15,15 +15,15 @@
 </head>
 <body>
 <div>Camera Test</div>
-<video id="video" autoplay=""style='width:320px;height:240px'></video>
+	<video id="video" autoplay=""style='width:320px;height:240px'></video>
 	<button id='picture'>Test Btn</button> 
-	<canvas id="canvas" width="640" height="480"></canvas>
+	<canvas id="canvas" width="320" height="240"></canvas>
 
 	<script type="text/javascript">
 		var video = document.getElementById("video"),
 	 		context = canvas.getContext('2d');
 	 	var errocb = function () {
-	          console.log('sth wrong!');
+	          alert('sth wrong!');
 	     }
 
 	 	if (navigator.getUserMedia) { // 标准的API
