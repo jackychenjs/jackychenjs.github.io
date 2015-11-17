@@ -23,15 +23,16 @@
 		alert('mozGetUserMedia: '+navigator.mozGetUserMedia);
 		alert('webkitGetUserMedia: '+navigator.webkitGetUserMedia);
 		alert('msGetUserMedia: '+navigator.msGetUserMedia);
-	 	navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia);
-
-		if (navigator.getUserMedia) {
+	 	//navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia);
+	 	var gM = navigator.getUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia;
+		if (gM) {
 			alert('ok');
+			alert('gM is ' + gM);
 		    var btn = document.getElementById('run');
 			btn.onclick = startWebcam;
 
 			function startWebcam(e) {
-			    navigator.getUserMedia({
+			    gM({
 			        video: true,
 			        audio: false
 			    }, onSuccess, onError);
