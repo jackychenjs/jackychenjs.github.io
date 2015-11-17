@@ -21,35 +21,34 @@
 	<script type="text/javascript">
 	 	navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia);
 
-		if (!navigator.getUserMedia) {
-		    return 0;
+		if (navigator.getUserMedia) {
+		    var btn = document.getElementById('run');
+			btn.onclick = startWebcam;
+
+			function startWebcam(e) {
+			    navigator.getUserMedia({
+			        video: true,
+			        audio: true
+			    }, onSuccess, onError);
+
+			    function onSuccess(stream) {
+
+			        var video = document.getElementById('webcam');
+
+			        if (window.URL) {
+			            video.src = window.URL.createObjectURL(stream);
+			        } else {
+			            video.src = stream;
+			        }
+
+			        video.autoplay = true;
+			        //or video.play();
+			    }
+
+			    function onError() {}
+			}
 		}
 
-		var btn = document.getElementById('run');
-		btn.onclick = startWebcam;
-
-		function startWebcam(e) {
-		    navigator.getUserMedia({
-		        video: true,
-		        audio: true
-		    }, onSuccess, onError);
-
-		    function onSuccess(stream) {
-
-		        var video = document.getElementById('webcam');
-
-		        if (window.URL) {
-		            video.src = window.URL.createObjectURL(stream);
-		        } else {
-		            video.src = stream;
-		        }
-
-		        video.autoplay = true;
-		        //or video.play();
-		    }
-
-		    function onError() {}
-		}
 	</script>
 </body>
 </html>
