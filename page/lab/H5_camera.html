@@ -10,26 +10,45 @@
 	<link rel="stylesheet" href="../../static/css/common/common.css">
 
 	<style>
-
+		.btn {
+			display: block;
+			margin: 0 auto;
+			width: 200px;
+			height: 100px;
+			line-height: 100px;
+			background-color:#0092de;
+			color:#fff;
+			text-align: center;
+			font-size: 30px;
+			border-radius: 20px;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.btn.ora {
+			background-color:#f90;
+		}
+		#webcam {
+			border: 2px #ccc solid;
+			border-radius: 5px;
+		}
 	</style>
 </head>
 <body>
 <div>Camera Test</div>
-	<input type="file" accept="image/*" capture="camera" value="拍照">
+	<a href="javascript:void(0);" id="run" class="btn ora">开启网络摄像头</a>
+	<video id="webcam" style="width:320px;height:240px;"></video>
 
-
-	<button id="run">开启网络摄像头</button><Br/>
-	<video id="webcam" style="height:240px"></video>
+	<input type="file" accept="image/*" capture="camera" value="拍照" class="btn">
 
 	<script type="text/javascript">
-		alert('getUserMedia: '+navigator.getUserMedia);
+		/*alert('getUserMedia: '+navigator.getUserMedia);
 		alert('mozGetUserMedia: '+navigator.mozGetUserMedia);
 		alert('webkitGetUserMedia: '+navigator.webkitGetUserMedia);
-		alert('msGetUserMedia: '+navigator.msGetUserMedia);
+		alert('msGetUserMedia: '+navigator.msGetUserMedia);*/
 	 	navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia);
 
 		if (navigator.getUserMedia) {
-			alert('ok');
+			//alert('ok');
 		    var btn = document.getElementById('run');
 			btn.onclick = startWebcam;
 
@@ -40,7 +59,7 @@
 			    }, onSuccess, onError);
 
 			    function onSuccess(stream) {
-			    	alert('inSuccess');
+			    	//alert('inSuccess');
 			        var video = document.getElementById('webcam');
 
 			        if (window.URL) {
