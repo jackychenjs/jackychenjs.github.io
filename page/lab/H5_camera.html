@@ -42,15 +42,25 @@
 			margin: 0 auto;
 			border: 2px #ccc solid;
 		}
+		.pic-wrap {
+			display: block;
+			margin: 0 auto;
+			width: 200px;
+			height: 100px;
+			border-radius: 20px;
+		}
 	</style>
 </head>
 <body>
 	<div style="text-align:center;margin-bottom:20px;">Camera Test</div>
 	<div class="btn">拍照
-		<input type="file" accept="image/*" capture="camera" value="拍照" class="upload-btn">
+		<input id="file_up" type="file" accept="image/*" capture="camera" value="拍照" class="upload-btn">
 	</div>
-	<a href="javascript:void(0);" id="run" class="btn ora">开启网络摄像头</a>
-	<video id="webcam" style="width:320px;height:240px;"></video>
+	<!-- <a href="javascript:void(0);" id="run" class="btn ora">开启网络摄像头</a>
+	<video id="webcam" style="width:320px;height:240px;"></video> -->
+	<div class="pic-wrap">
+		<img id="preview" style="width: 200px; height: 100px;" alt="Image preview" />
+	</div>
 
 
 	<script src="/static/mod/zepto/zepto.min.js"></script>
@@ -59,7 +69,29 @@
 		alert('mozGetUserMedia: '+navigator.mozGetUserMedia);
 		alert('webkitGetUserMedia: '+navigator.webkitGetUserMedia);
 		alert('msGetUserMedia: '+navigator.msGetUserMedia);*/
-	 	navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia);
+
+		var _file_up = document.getElementById('file_up'),
+			fileCache = [],
+			fileReader = new FileReader();
+
+		fileReader.onload = function (e) {
+		  document.getElementById("preview").src = e.target.result;
+		};
+
+		_file_up.addEventListener('change', readImg, false);
+
+		function readImg(){
+			var upFile = _file_up.files[0];
+			fileReader.readAsDataURL(upFile);
+		}
+
+
+
+		
+
+
+
+	 	/*navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia);
 
 		if (navigator.getUserMedia) {
 			//alert('ok');
@@ -90,7 +122,7 @@
 			    	alert('inError');
 			    }
 			}
-		}
+		}*/
 
 	</script>
 </body>
