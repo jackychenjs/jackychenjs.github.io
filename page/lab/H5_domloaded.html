@@ -17,6 +17,9 @@
 	                var rootSize = 20 * ( windowWidth / 320);
 	                var htmlNode = document.getElementsByTagName("html")[0];
 	                htmlNode.style.fontSize = rootSize+'px';
+	                alert(window.innerWidth);
+	                alert(document.documentElement.clientWidth);
+	                alert(document.body.clientWidth);
 	                alert(rootSize);
 	            }
 	            fixRem();
