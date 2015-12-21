@@ -7,7 +7,7 @@
 	<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
 </head>
 <body>
-	<div style="height: 2rem; width: 3rem; background-color: #6cf;">DOMContentLoaded Test!</div>
+	<div style="height: 50rem; width: 3rem; background-color: #6cf;">DOMContentLoaded Test!</div>
 	<script type="text/javascript">
 		var fuc = {
 			init: function(){
@@ -19,8 +19,9 @@
 	                htmlNode.style.fontSize = rootSize+'px';
 	                alert(window.innerWidth);
 	                alert(document.documentElement.clientWidth);
-	                alert(document.body.clientWidth);
-	                alert(rootSize);
+	                alert(window.navigator.userAgent);
+	                //alert(document.body.clientWidth);
+	                //alert(rootSize);
 	            }
 	            fixRem();
 	            window.addEventListener('resize', fixRem, false);
